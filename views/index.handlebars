@@ -1,0 +1,22 @@
+<div class="container container-head">
+  <img src="http://www.agentwp.com/wp-content/uploads/link-wordpress-post-title-to-external-url.png">
+  <h1>URL Shortener</h1>
+</div>
+
+{{#if invalidURL}}
+  <div class="alert alert-danger" role="alert">
+    <p>The URL you have entered - <strong>localhost:3000/{{invalidURL}}</strong> - is invalid.</p>
+  </div>
+{{/if}}
+
+<br />
+
+<div class="container fill-in">
+  <form action="/shortenurl" method="post">
+    <label for="longURL">URL</label>
+    <input type="url" name="longURL" id="longURL">
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
